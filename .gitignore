@@ -1,0 +1,7 @@
+data/
+
+logmerger
+logmerger.exe
+!logmerger/
+
+go.sum
