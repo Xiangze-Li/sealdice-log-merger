@@ -1,17 +1,17 @@
 package logmerger
 
-type Statistics struct {
+type statistics struct {
 	Total   int
-	PerFile []PerFileStatistics
+	PerFile []perFileStatistics
 }
 
-type PerFileStatistics struct {
+type perFileStatistics struct {
 	FileName string
 	Count    int
 	IsMain   bool
 }
 
-type mainThenFn []PerFileStatistics
+type mainThenFn []perFileStatistics
 
 func (a mainThenFn) Len() int      { return len(a) }
 func (a mainThenFn) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
